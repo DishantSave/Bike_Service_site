@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    justify-self: center;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(10, 67, 82);
+}
+
+li {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: orange;
+}
+
+header {
+    position: relative;
+    padding: 0rem 2rem;
+}
+
+/* navbar css */
+.navbar {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navbar .logo {
+    box-sizing: border-box;
+
+
+
+}
+
+.navbar .logo img {
+    box-sizing: border-box;
+    width: 5rem;
+    height: 4rem;
+}
+
+.navbar .logo a {
+    color: yellow;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 4px rgb(92, 91, 91);
+}
+
+.navbar .links {
+    display: flex;
+    gap: 3rem;
+
+}
+
+.navbar .links li {
+    /* border: 1px solid green; */
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.2rem 0.3rem;
+    width: 4.5rem;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.2s all ease-in-out;
+
+}
+
+.navbar .links li:hover {
+    box-shadow: 2px 2px 4px black;
+    background: linear-gradient(180deg, rgb(255, 254, 254), rgb(10, 67, 82));
+    scale: 1.05;
+
+}
+
+.navbar .links li:active {
+    scale: 0.95;
+}
+
+.navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+
+}
+
+.action_btn {
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 4px 2px 3px black;
+    transition: 0.2s all ease-in-out;
+
+}
+
+.action_btn:hover {
+
+    color: black;
+    scale: 1.05;
+    background: linear-gradient(to right, rgb(203, 206, 17), orange)
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    /* border: 1px solid greenyellow; */
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 250px;
+    height: 0;
+   
+    background: linear-gradient(180deg, #9b9393, rgb(226, 222, 222));
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+    height: 240px;
+    border-radius: 10px;
+}
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .action_btn {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.line{
+    
+    width: 70%;
+    margin: 0 auto;
+    border: 2px solid rgb(251, 255, 6);
+}
+
+/* navbar responsive, using the media query */
+
+@media(max-width:870px) {
+    html {
+        font-size: 80%;
+    }
+
+
+}
+
+@media(max-width:665px) {
+
+    .navbar .links,
+    .navbar .action_btn
+     {
+        display: none;
+        transition: 0.6s ease-in-out;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+
+}
+@media(max-width:300px){
+    .line{
+    display: none;
+    }
+}
+
+/* ------------------------- Navbar end here ------------------------------ */
+
+.slider-sec{
+    /* border: 1px solid yellow; */
+    margin-top: 2px;
+    width: 100%;
+    height: 100vh;
+  
+    
+}
+.main{
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    width: 70%;
+    height: 500px;
+    outline: none;
+    margin: 2rem auto;
+    box-shadow: 7px 7px 12px rgb(181, 255, 8);
+    position: relative;
+    overflow: hidden;
+   
+}
+.main img{
+    width: 100%;
+    height: 500px;
+}
+
+.slide{
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    transition: 1s;
+
+}
+
+.sbtn{
+    text-align: center;
+    margin-top:15px;
+    
+}
+.sbtn button{
+    width: 20px;
+  
+    
+    font-size: 1.2rem;
+    border-radius: 100%;
+}
